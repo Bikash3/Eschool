@@ -73,3 +73,5 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 # eschool
 School Management System
+# git setup
+start debalina sumit
