@@ -15,7 +15,17 @@ class Login extends Migration
     {
         
         Schema::table('student', function (Blueprint $table) {
-            $table->string('registartion_id');
+            $table->bigIncrements('id');
+            $table->string('reg_id');
+            $table->string('name');
+            $table->string('guardian_name');
+            $table->string('address');
+            $table->char('gender');
+            $table->date('d_o_b');
+            $table->char('class');
+            $table->char('stream');
+            $table->integer('phone');
+            $table->string('email');
             $table->string('password');
         });
         
