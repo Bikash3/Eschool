@@ -14,4 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', "loginController@index");
+Route::get('/login/admin', "loginController@index");
+Route::get('/login/teacher', "loginController@teacher");
+Route::get('/login/student', "loginController@student");
+
+
+
+Route::get('/signup', function () {
+    return view('signup');
+});
