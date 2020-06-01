@@ -1,3 +1,4 @@
-@include('./include/header')
-    <login></login>
-@include('./include/footer')
+@extends('layout.admin')
+@section('content')
+<login></login>
+@endsection
