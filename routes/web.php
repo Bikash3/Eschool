@@ -22,4 +22,4 @@ Route::get('/login/student', "loginController@student");
 
 Route::get('/signup', function () {
     return view('signup');
-});
+});     
