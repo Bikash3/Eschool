@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class SchoolDetails extends Migration
+class Login extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,22 @@ class SchoolDetails extends Migration
      */
     public function up()
     {
-        Schema::table('school', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        
+        Schema::table('student', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('reg_id');
             $table->string('name');
+            $table->string('guardian_name');
             $table->string('address');
-            $table->string('branch');
-            $table->string('website');
-            $table->string('email');
+            $table->char('gender');
+            $table->date('d_o_b');
+            $table->char('class');
+            $table->char('stream');
             $table->integer('phone');
-            $table->string('g_api');
+            $table->string('email');
+            $table->string('password');
         });
+        
     }
 
     /**
