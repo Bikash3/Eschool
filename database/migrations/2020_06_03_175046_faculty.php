@@ -24,6 +24,8 @@ class Faculty extends Migration
             $table->integer('phone');
             $table->string('email');
             $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
