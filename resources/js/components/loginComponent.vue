@@ -1,5 +1,6 @@
 <template>
   <div>
+  <div class="row align-items-center">
     <aside class="meta">
         <h1>Lorem ipsum dolor sit amet</h1>
         <p>
@@ -37,6 +38,7 @@
                 </g>
             </svg>
         </div>
+    </div>
     </div>
   </div>
 </template>
@@ -467,10 +469,11 @@ html, body {
 }
 
 .meta {
-  flex-basis: calc(80% - 50vh);
-  flex-basis: calc(80% - 50vh);
-      background: rgba(2, 2, 2, 0.58);
-  padding: 70px;
+    flex-basis: calc(90% - 50vh);
+    background: rgba(2, 2, 2, 0.58);
+    padding: 70px;
+    height: 50vh;
+    margin-right: 10vh;
 }
 .meta > * {
   -webkit-transition: none !important;
