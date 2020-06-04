@@ -8,6 +8,6 @@ class login extends Model
 {
     protected $fillable = [
         'user_id', 
-        'visitor',
+        'ip_address',
     ];
 }
