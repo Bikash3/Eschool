@@ -1994,6 +1994,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: {
     name: 'Bikash'
@@ -38261,97 +38263,101 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "row align-items-center" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { attrs: { id: "login" } }, [
-        _c("div", { staticClass: "login-view" }, [
-          _c("header", { staticClass: "login-header" }, [
-            _c("h1", [_vm._v("Hi")]),
-            _vm._v("\n              Welcome ," + _vm._s(_vm.name)),
-            _c("br"),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row align-items-center" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "login" } }, [
+          _c("div", { staticClass: "login-view" }, [
+            _c("header", { staticClass: "login-header" }, [
+              _c("h1", [_vm._v("Hi")]),
+              _vm._v("\n              Welcome ," + _vm._s(_vm.name)),
+              _c("br"),
+              _vm._v(" "),
+              _vm._m(1)
+            ]),
             _vm._v(" "),
-            _vm._m(1)
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            attrs: {
-              type: "email",
-              required: "",
-              pattern: ".*\\.\\w{2,}",
-              placeholder: "Email Address"
-            }
-          }),
-          _vm._v(" "),
-          _c("input", {
-            attrs: { type: "password", required: "", placeholder: "Password" }
-          }),
-          _vm._v(" "),
-          _c("button", { staticClass: "login-button", attrs: { href: "#" } }, [
-            _vm._v("Login")
-          ]),
-          _vm._v(" "),
-          _c(
-            "svg",
-            {
+            _c("input", {
               attrs: {
-                id: "svg-lines",
-                version: "1.1",
-                xmlns: "http://www.w3.org/2000/svg",
-                "xmlns:xlink": "http://www.w3.org/1999/xlink",
-                x: "0px",
-                y: "0px",
-                viewBox: "0 0 284.2 152.7",
-                "xml:space": "preserve"
+                type: "email",
+                required: "",
+                pattern: ".*\\.\\w{2,}",
+                placeholder: "Email Address"
               }
-            },
-            [
-              _c("path", {
-                staticClass: "st0",
+            }),
+            _vm._v(" "),
+            _c("input", {
+              attrs: { type: "password", required: "", placeholder: "Password" }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "login-button", attrs: { href: "#" } },
+              [_vm._v("Login")]
+            ),
+            _vm._v(" "),
+            _c(
+              "svg",
+              {
                 attrs: {
-                  d:
-                    "M37.7,107.3h222.6c12,0,21.8,9.7,21.8,21.7s-9.7,21.8-21.8,21.8c0,0-203.6,0-222.6,0S2.2,138.6,2.2,103.3   c0-52,113.5-101.5,141-101.5c13.5,0,21.8,9.7,21.8,21.8s-9.7,21.7-21.8,21.7s-21.8-9.7-21.8-21.7s9.7-21.8,21.8-21.8"
+                  id: "svg-lines",
+                  version: "1.1",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                  x: "0px",
+                  y: "0px",
+                  viewBox: "0 0 284.2 152.7",
+                  "xml:space": "preserve"
                 }
-              }),
-              _vm._v(" "),
-              _c("path", {
-                staticClass: "st1",
-                attrs: {
-                  d:
-                    "M260.2,76.3L250,87.8l-9-9c-6.2-6.2,2-24.7,17.2-24.7c15.2,0,23.9,17.7,23.9,29.7s-11.7,23.5-23.9,23.5h-10.2"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "g",
-                {
-                  staticClass: "svg-loader",
-                  attrs: { xmlns: "http://www.w3.org/2000/svg" }
-                },
-                [
-                  _c("path", {
-                    staticClass: "svg-loader-segment -cal",
-                    attrs: { d: "M164.7,23.5c0-12-9.7-21.8-21.8-21.8" }
-                  }),
-                  _vm._v(" "),
-                  _c("path", {
-                    staticClass: "svg-loader-segment -heart",
-                    attrs: { d: "M143,45.2c12,0,21.8-9.7,21.8-21.7" }
-                  }),
-                  _vm._v(" "),
-                  _c("path", {
-                    staticClass: "svg-loader-segment -steps",
-                    attrs: { d: "M121.2,23.5c0,12,9.7,21.7,21.8,21.7" }
-                  }),
-                  _vm._v(" "),
-                  _c("path", {
-                    staticClass: "svg-loader-segment -temp",
-                    attrs: { d: "M143,1.7c-12,0-21.8,9.7-21.8,21.8" }
-                  })
-                ]
-              )
-            ]
-          )
+              },
+              [
+                _c("path", {
+                  staticClass: "st0",
+                  attrs: {
+                    d:
+                      "M37.7,107.3h222.6c12,0,21.8,9.7,21.8,21.7s-9.7,21.8-21.8,21.8c0,0-203.6,0-222.6,0S2.2,138.6,2.2,103.3   c0-52,113.5-101.5,141-101.5c13.5,0,21.8,9.7,21.8,21.8s-9.7,21.7-21.8,21.7s-21.8-9.7-21.8-21.7s9.7-21.8,21.8-21.8"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  staticClass: "st1",
+                  attrs: {
+                    d:
+                      "M260.2,76.3L250,87.8l-9-9c-6.2-6.2,2-24.7,17.2-24.7c15.2,0,23.9,17.7,23.9,29.7s-11.7,23.5-23.9,23.5h-10.2"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "g",
+                  {
+                    staticClass: "svg-loader",
+                    attrs: { xmlns: "http://www.w3.org/2000/svg" }
+                  },
+                  [
+                    _c("path", {
+                      staticClass: "svg-loader-segment -cal",
+                      attrs: { d: "M164.7,23.5c0-12-9.7-21.8-21.8-21.8" }
+                    }),
+                    _vm._v(" "),
+                    _c("path", {
+                      staticClass: "svg-loader-segment -heart",
+                      attrs: { d: "M143,45.2c12,0,21.8-9.7,21.8-21.7" }
+                    }),
+                    _vm._v(" "),
+                    _c("path", {
+                      staticClass: "svg-loader-segment -steps",
+                      attrs: { d: "M121.2,23.5c0,12,9.7,21.7,21.8,21.7" }
+                    }),
+                    _vm._v(" "),
+                    _c("path", {
+                      staticClass: "svg-loader-segment -temp",
+                      attrs: { d: "M143,1.7c-12,0-21.8,9.7-21.8,21.8" }
+                    })
+                  ]
+                )
+              ]
+            )
+          ])
         ])
       ])
     ])

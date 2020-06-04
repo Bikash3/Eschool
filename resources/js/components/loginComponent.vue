@@ -1,5 +1,6 @@
 <template>
   <div>
+  <div class="container">
   <div class="row align-items-center">
     <aside class="meta">
         <h1>Lorem ipsum dolor sit amet</h1>
@@ -40,6 +41,7 @@
         </div>
     </div>
     </div>
+  </div>
   </div>
 </template>
 
