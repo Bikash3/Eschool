@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Route::get('/login/admin', "loginController@index");
 
-Route::get('/login/verify', "loginController@verify");
+Route::get('/login/verify', "loginController@verify")->name('verifyuser');
 
 
 Route::get('/login/teacher', "loginController@teacher");

@@ -1996,6 +1996,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: {
     name: 'Bikash'
@@ -38277,24 +38280,7 @@ var render = function() {
               _vm._m(1)
             ]),
             _vm._v(" "),
-            _c("input", {
-              attrs: {
-                type: "email",
-                required: "",
-                pattern: ".*\\.\\w{2,}",
-                placeholder: "Email Address"
-              }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              attrs: { type: "password", required: "", placeholder: "Password" }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "login-button", attrs: { href: "#" } },
-              [_vm._v("Login")]
-            ),
+            _vm._m(2),
             _vm._v(" "),
             _c(
               "svg",
@@ -38409,6 +38395,36 @@ var staticRenderFns = [
       _vm._v("Our Online"),
       _c("br"),
       _vm._v("Platform.")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { attrs: { action: "/verifyuser", method: "post" } }, [
+      _c("input", {
+        attrs: {
+          type: "email",
+          name: "email",
+          required: "",
+          pattern: ".*\\.\\w{2,}",
+          placeholder: "Email Address"
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        attrs: {
+          type: "password",
+          name: "password",
+          required: "",
+          placeholder: "Password"
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "login-button",
+        attrs: { type: "submit", value: "Login" }
+      })
     ])
   }
 ]

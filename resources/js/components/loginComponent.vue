@@ -19,12 +19,15 @@
         <div class="login-view">
             <header class="login-header">
                 <h1>Hi</h1>
-                Welcome ,{{name}}<br />
+                Welcome ,{{ name }}<br />
                 <span class="login-subheading">Our Online<br />Platform.</span>
             </header>
-            <input type="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
-            <input type="password" required placeholder="Password" />
-            <button href="#" class="login-button">Login</button>
+            <form action="/verifyuser" method="post">
+                <input type="email" name="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
+                <input type="password" name="password" required placeholder="Password" />
+                <!--<button action="/verifyuser" class="login-button">Login</button> -->
+                <input type="submit" class="login-button" value="Login">
+            </form>
             <!-- <div class="login-register">
                 Don't have an account? <a>Sign Up</a>
                 </div>-->
@@ -48,7 +51,7 @@
 <script>
 export default {
     data: {
-        name: 'Bikash',
+        name: 'Bikash'
     }
 }
 </script>
