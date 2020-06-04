@@ -46,7 +46,7 @@
 <script>
 export default {
     data: {
-        name: 'Bikash'
+        name: 'Bikash',
     }
 }
 </script>

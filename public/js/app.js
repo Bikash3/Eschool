@@ -50832,8 +50832,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\CISPL-SUMIT\Desktop\Personal\Sumit Git\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\CISPL-SUMIT\Desktop\Personal\Sumit Git\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
