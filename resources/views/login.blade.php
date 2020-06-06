@@ -1,4 +1,4 @@
 @extends('layout.login')
 @section('content')
-<login></login>
+<login data-csrf='{{ csrf_token() }}'></login>
 @endsection

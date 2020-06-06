@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class employee_details extends Model
+class Employee extends Model
 {
     protected $fillable = [
         'emp_id', 

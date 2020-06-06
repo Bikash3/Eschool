@@ -1996,9 +1996,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: {
-    name: 'Bikash'
+  data: function data() {
+    return {
+      placeholder: '',
+      name: 'dabo',
+      email: '',
+      password: '',
+      errorMassageBox: true,
+      errorMassage: "Please Enter login details !!"
+    };
+  },
+  methods: {
+    csrf: function csrf() {
+      return this.$attrs['data-csrf'];
+    },
+    formsubmit: function formsubmit() {
+      this.errorMassageBox = false;
+
+      if (this.email == '') {
+        this.errorMassageBox = true;
+        this.errorMassage = "Please Enter Email!!";
+        return false;
+      }
+
+      if (this.password == '') {
+        this.errorMassageBox = true;
+        this.errorMassage = "Please Enter password!!";
+        return false;
+      }
+    }
   }
 });
 
@@ -6446,7 +6476,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Lato:400,300);", ""]);
 
 // module
-exports.push([module.i, "\n* {\n  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);\n}\n#login {\n  width: 50vh;\n  height: 90vh;\n  padding: 6vh;\n  background: white;\n  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);\n}\n.login-view {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n}\n.login-header {\n  padding: 6vh;\n}\n.login-header, .login-header > * {\n  font-size: 4.8vh;\n  margin: 0;\n  font-weight: 300;\n}\n.login-header > h1 {\n  font-size: 4.8vh;\n  font-weight: 400;\n  margin-bottom: 4.8vh;\n}\n.login-header > h2 {\n  font-size: 3vh;\n}\n.login-subheading {\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-register {\n  position: absolute;\n  bottom: 0;\n  height: 10vh;\n  line-height: 10vh;\n  padding: 0 6vh;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-register > a {\n  font-weight: 400;\n}\ninput {\n  font-size: 2.5vh;\n  width: calc(100% - 13vh);\n  height: 7.5vh;\n  margin-bottom: 2vh;\n  background: transparent;\n  position: absolute;\n  top: 0;\n  left: 6.5vh;\n  z-index: 2;\n  border: none;\n  box-shadow: inset 0 -0.5vh rgba(0, 0, 0, 0.1);\n}\ninput:focus {\n  outline: none;\n  box-shadow: inset 0 -0.5vh transparent;\n}\ninput[type=\"email\"] {\n  top: 58%;\n}\ninput[type=\"password\"] {\n  top: calc(58% + 7.5vh);\n}\ninput[type=\"email\"]:valid ~ * .st1 {\n  transition-timing-function: ease-in-out;\n  stroke-dasharray: 50, 153;\n  stroke-dashoffset: 25;\n}\ninput[type=\"password\"]:focus ~ * .st0,\ninput[type=\"password\"]:valid ~ * .st0,\n.login-button:focus ~ * .st0 {\n  stroke-dasharray: 210, 900;\n  stroke-dashoffset: -305;\n}\ninput[type=\"email\"]:focus ~ * .st0 {\n  stroke-dasharray: 210, 900;\n  stroke-dashoffset: 0;\n}\ninput:not(:valid) ~ .login-button {\n  /*pointer-events: none;*/\n  opacity: 0.6;\n}\n.login-button {\n  color: #000000;\n    font-size: 3vh;\n    padding: .7vh 7vh;\n    position: absolute;\n    bottom: 10vh;\n    font-weight: 500;\n    box-shadow: none;\n    border: 1px solid #000;\n    background: transparent;\n    /* text-transform: lowercase; */\n    left: 6.5vh;\n}\n.login-button:focus {\n  outline: none;\n}\n@-webkit-keyframes button-press {\nfrom, 20% {\n    opacity: 1;\n}\n10% {\n    opacity: 0.4;\n}\n40%, to {\n    opacity: 0;\n}\n}\n@keyframes button-press {\nfrom, 20% {\n    opacity: 1;\n}\n10% {\n    opacity: 0.4;\n}\n40%, to {\n    opacity: 0;\n}\n}\n@-webkit-keyframes pulse {\nfrom, to {\n    transform: scale(1);\n}\n50% {\n    transform: scale(1.2);\n}\n}\n@keyframes pulse {\nfrom, to {\n    transform: scale(1);\n}\n50% {\n    transform: scale(1.2);\n}\n}\n@-webkit-keyframes disloginear {\nto {\n    opacity: 0;\n}\n}\n@keyframes disloginear {\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes loginear {\nto {\n    opacity: 1;\n}\n}\n@keyframes loginear {\nto {\n    opacity: 1;\n}\n}\n.login-bar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  opacity: 0;\n}\n.login-item {\n  flex-basis: 50%;\n  flex-grow: 0;\n  flex-shrink: 0;\n  border: 1px solid transparent;\n  padding: 2vh 4vh;\n  padding-bottom: 0;\n}\n.login-item > *:not(.login-graphic) {\n  transform: translateY(1rem);\n}\n.login-item:nth-child(1) .login-graphic {\n  transform: translateX(17vh) translateY(5vh);\n}\n.login-item:nth-child(2) .login-graphic {\n  transform: translateX(-4vh) translateY(4vh);\n}\n.login-item:nth-child(3) .login-graphic {\n  transform: translateX(6vh) translateY(-7vh);\n}\n.login-item:nth-child(4) .login-graphic {\n  transform: translateY(-8vh) translateX(-4vh);\n}\n.login-graphic {\n  transition: transform 1.2s 3.75s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s 4.35s cubic-bezier(0.77, 0, 0.175, 1);\n  margin-top: 1rem;\n  opacity: 0;\n}\n.login-data {\n  font-size: 2rem;\n}\n.login-unit {\n  font-size: 1rem;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-label {\n  font-size: 0.8rem;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-menu-icon {\n  width: 1.5rem;\n  height: 2px;\n  background: #D0DFF0;\n  margin-top: 0.5rem;\n}\n.login-menu-icon:before, .login-menu-icon:after {\n  content: '';\n  display: block;\n  position: absolute;\n  width: 1rem;\n  height: 100%;\n  background: #D0DFF0;\n}\n.login-menu-icon:before {\n  top: -0.5rem;\n  right: 0.1rem;\n}\n.login-menu-icon:after {\n  top: 0.5rem;\n  left: 0.1rem;\n}\n.login-avatar {\n  width: 2.5rem;\n  height: 2.5rem;\n  border-radius: 1.25rem;\n}\n.login-tag {\n  font-size: 0.8rem;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-tag + .login-tag {\n  margin-left: 1rem;\n}\n.login-tag:before {\n  content: '';\n  display: inline-block;\n  margin-right: 0.5rem;\n  height: 0.5rem;\n  width: 0.5rem;\n  border-radius: 50%;\n  background: #D0DFF0;\n}\n.login-tag.-active:before {\n  background: #0F9EDE;\n}\nbody {\n  font-family: Lato, sans-serif;\n  font-weight: 300;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n background: url(/images/bg.jpg) no-repeat;\n    background-size: cover;\n}\n.st0, .st1, .svg-loader-segment {\n  fill: none;\n  stroke: #0F9EDE;\n  stroke-width: 0.5vh;\n  stroke-alignment: inside;\n  opacity: 1;\n  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);\n}\n.svg-loader {\n  opacity: 0;\n}\n.st0 {\n  stroke-dasharray: 0, 900;\n  stroke-dashoffset: 0;\n}\n.st1 {\n  transition-delay: 0.3s;\n  stroke-dasharray: 50, 153;\n  stroke-dashoffset: -153;\n}\n.svg-loader-segment {\n  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.85s cubic-bezier(0.77, 0, 0.175, 1), stroke 0.85s cubic-bezier(0.77, 0, 0.175, 1);\n}\n#svg-lines {\n  position: absolute;\n  top: 45%;\n  left: 0;\n  width: 100%;\n  z-index: 0;\n  overflow: visible;\n  transform-origin: center 4vh;\n}\n.svg-data {\n  fill: none;\n  stroke-width: 0.5vh;\n}\n.svg-data.-temp {\n  stroke: #F4814B;\n  stroke-dasharray: 20, 118;\n}\n.svg-data.-cal {\n  stroke: #08B5CF;\n  stroke-dasharray: 20, 113;\n}\n.svg-data.-steps-bg {\n  stroke: #E0E1E0;\n  stroke-dasharray: 40, 100;\n  stroke-dashoffset: -60;\n}\n.svg-data.-steps {\n  stroke: #0F9EDE;\n  stroke-dasharray: 20, 73;\n  stroke-dashoffset: -53;\n}\n.svg-data.-heart {\n  stroke: #9965AA;\n  stroke-dasharray: 50, 200;\n  stroke-dashoffset: -150;\n}\n.svg-activity-fill {\n  fill: #C4E4F8;\n}\n.svg-activity-line {\n  fill: none;\n  stroke: #65BCEA;\n  stroke-miterlimit: 10;\n  stroke-width: 0.25vh;\n}\n.svg-activity-avg, .svg-activity-indicator {\n  fill: none;\n  stroke: #D0DFF0;\n  stroke-width: 0.25vh;\n  mix-blend-mode: multiply;\n}\n.svg-activity-fill, .svg-activity-line {\n  transform: translateY(10vh);\n  opacity: 0;\n}\nhtml, body {\n  font-size: 2.5vh;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n.meta {\n    flex-basis: calc(90% - 50vh);\n    background: rgba(2, 2, 2, 0.58);\n    padding: 70px;\n    height: 50vh;\n    margin-right: 10vh;\n}\n.meta > * {\n  transition: none !important;\n}\n.meta > h1 {\n  font-weight: 300;\n  font-size: 32px;\n  color: #fff;\n}\n.meta > p {\n  line-height: 1.3;\n  font-size: 16px;\n  color: #fff;\n}\n.meta a {\n  color: #fff;\n}\n.meta a:hover {\n  color: white;\n}\n@media (max-width: 750px) {\n.meta {\n    display: none;\n}\n}\n.route {\n  display: none;\n}\n*, *:before, *:after {\n  box-sizing: border-box;\n  position: relative;\n}\n\n", ""]);
+exports.push([module.i, "\n* {\n  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);\n}\n#login {\n  width: 50vh;\n  height: 90vh;\n  padding: 6vh;\n  background: white;\n  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);\n}\n.login-view {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n}\n.login-header {\n  padding: 6vh;\n}\n.login-header, .login-header > * {\n  font-size: 4.8vh;\n  margin: 0;\n  font-weight: 300;\n}\n.login-header > h1 {\n  font-size: 4.8vh;\n  font-weight: 400;\n  margin-bottom: 4.8vh;\n}\n.login-header > h2 {\n  font-size: 3vh;\n}\n.login-subheading {\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-register {\n  position: absolute;\n  bottom: 0;\n  height: 10vh;\n  line-height: 10vh;\n  padding: 0 6vh;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-register > a {\n  font-weight: 400;\n}\ninput {\n  font-size: 2.5vh;\n  width: calc(100% - 13vh);\n  height: 7.5vh;\n  margin-bottom: 2vh;\n  background: transparent;\n  position: absolute;\n  top: 0;\n  left: 6.5vh;\n  z-index: 2;\n  border: none;\n  box-shadow: inset 0 -0.5vh rgba(0, 0, 0, 0.1);\n}\ninput:focus {\n  outline: none;\n  box-shadow: inset 0 -0.5vh transparent;\n}\ninput[type=\"email\"] {\n  top: 58%;\n}\ninput[type=\"password\"] {\n  top: calc(58% + 7.5vh);\n}\ninput[type=\"email\"]:valid ~ * .st1 {\n  transition-timing-function: ease-in-out;\n  stroke-dasharray: 50, 153;\n  stroke-dashoffset: 25;\n}\ninput[type=\"password\"]:focus ~ * .st0,\ninput[type=\"password\"]:valid ~ * .st0,\n.login-button:focus ~ * .st0 {\n  stroke-dasharray: 210, 900;\n  stroke-dashoffset: -305;\n}\ninput[type=\"email\"]:focus ~ * .st0 {\n  stroke-dasharray: 210, 900;\n  stroke-dashoffset: 0;\n}\ninput:not(:valid) ~ .login-button {\n  /*pointer-events: none;*/\n  opacity: 0.6;\n}\n.login-button {\n  color: #000000;\n    font-size: 3vh;\n    padding: .7vh 7vh;\n    position: absolute;\n    bottom: 10vh;\n    /*bottom: -27vh;*/\n    font-weight: 500;\n    box-shadow: none;\n    border: 1px solid #000;\n    background: transparent;\n    /* text-transform: lowercase; */\n    left: 6.5vh;\n}\n.login-button:focus {\n  outline: none;\n}\n@-webkit-keyframes button-press {\nfrom, 20% {\n    opacity: 1;\n}\n10% {\n    opacity: 0.4;\n}\n40%, to {\n    opacity: 0;\n}\n}\n@keyframes button-press {\nfrom, 20% {\n    opacity: 1;\n}\n10% {\n    opacity: 0.4;\n}\n40%, to {\n    opacity: 0;\n}\n}\n@-webkit-keyframes pulse {\nfrom, to {\n    transform: scale(1);\n}\n50% {\n    transform: scale(1.2);\n}\n}\n@keyframes pulse {\nfrom, to {\n    transform: scale(1);\n}\n50% {\n    transform: scale(1.2);\n}\n}\n@-webkit-keyframes disloginear {\nto {\n    opacity: 0;\n}\n}\n@keyframes disloginear {\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes loginear {\nto {\n    opacity: 1;\n}\n}\n@keyframes loginear {\nto {\n    opacity: 1;\n}\n}\n.login-bar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  opacity: 0;\n}\n.login-item {\n  flex-basis: 50%;\n  flex-grow: 0;\n  flex-shrink: 0;\n  border: 1px solid transparent;\n  padding: 2vh 4vh;\n  padding-bottom: 0;\n}\n.login-item > *:not(.login-graphic) {\n  transform: translateY(1rem);\n}\n.login-item:nth-child(1) .login-graphic {\n  transform: translateX(17vh) translateY(5vh);\n}\n.login-item:nth-child(2) .login-graphic {\n  transform: translateX(-4vh) translateY(4vh);\n}\n.login-item:nth-child(3) .login-graphic {\n  transform: translateX(6vh) translateY(-7vh);\n}\n.login-item:nth-child(4) .login-graphic {\n  transform: translateY(-8vh) translateX(-4vh);\n}\n.login-graphic {\n  transition: transform 1.2s 3.75s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s 4.35s cubic-bezier(0.77, 0, 0.175, 1);\n  margin-top: 1rem;\n  opacity: 0;\n}\n.login-data {\n  font-size: 2rem;\n}\n.login-unit {\n  font-size: 1rem;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-label {\n  font-size: 0.8rem;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-menu-icon {\n  width: 1.5rem;\n  height: 2px;\n  background: #D0DFF0;\n  margin-top: 0.5rem;\n}\n.login-menu-icon:before, .login-menu-icon:after {\n  content: '';\n  display: block;\n  position: absolute;\n  width: 1rem;\n  height: 100%;\n  background: #D0DFF0;\n}\n.login-menu-icon:before {\n  top: -0.5rem;\n  right: 0.1rem;\n}\n.login-menu-icon:after {\n  top: 0.5rem;\n  left: 0.1rem;\n}\n.login-avatar {\n  width: 2.5rem;\n  height: 2.5rem;\n  border-radius: 1.25rem;\n}\n.login-tag {\n  font-size: 0.8rem;\n  color: rgba(0, 0, 0, 0.45);\n}\n.login-tag + .login-tag {\n  margin-left: 1rem;\n}\n.login-tag:before {\n  content: '';\n  display: inline-block;\n  margin-right: 0.5rem;\n  height: 0.5rem;\n  width: 0.5rem;\n  border-radius: 50%;\n  background: #D0DFF0;\n}\n.login-tag.-active:before {\n  background: #0F9EDE;\n}\nbody {\n  font-family: Lato, sans-serif;\n  font-weight: 300;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n background: url(/images/bg.jpg) no-repeat;\n    background-size: cover;\n}\n.st0, .st1, .svg-loader-segment {\n  fill: none;\n  stroke: #0F9EDE;\n  stroke-width: 0.5vh;\n  stroke-alignment: inside;\n  opacity: 1;\n  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);\n}\n.svg-loader {\n  opacity: 0;\n}\n.st0 {\n  stroke-dasharray: 0, 900;\n  stroke-dashoffset: 0;\n}\n.st1 {\n  transition-delay: 0.3s;\n  stroke-dasharray: 50, 153;\n  stroke-dashoffset: -153;\n}\n.svg-loader-segment {\n  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.85s cubic-bezier(0.77, 0, 0.175, 1), stroke 0.85s cubic-bezier(0.77, 0, 0.175, 1);\n}\n#svg-lines {\n  position: absolute;\n  top: 45%;\n  left: 0;\n  width: 100%;\n  z-index: 0;\n  overflow: visible;\n  transform-origin: center 4vh;\n}\n.svg-data {\n  fill: none;\n  stroke-width: 0.5vh;\n}\n.svg-data.-temp {\n  stroke: #F4814B;\n  stroke-dasharray: 20, 118;\n}\n.svg-data.-cal {\n  stroke: #08B5CF;\n  stroke-dasharray: 20, 113;\n}\n.svg-data.-steps-bg {\n  stroke: #E0E1E0;\n  stroke-dasharray: 40, 100;\n  stroke-dashoffset: -60;\n}\n.svg-data.-steps {\n  stroke: #0F9EDE;\n  stroke-dasharray: 20, 73;\n  stroke-dashoffset: -53;\n}\n.svg-data.-heart {\n  stroke: #9965AA;\n  stroke-dasharray: 50, 200;\n  stroke-dashoffset: -150;\n}\n.svg-activity-fill {\n  fill: #C4E4F8;\n}\n.svg-activity-line {\n  fill: none;\n  stroke: #65BCEA;\n  stroke-miterlimit: 10;\n  stroke-width: 0.25vh;\n}\n.svg-activity-avg, .svg-activity-indicator {\n  fill: none;\n  stroke: #D0DFF0;\n  stroke-width: 0.25vh;\n  mix-blend-mode: multiply;\n}\n.svg-activity-fill, .svg-activity-line {\n  transform: translateY(10vh);\n  opacity: 0;\n}\nhtml, body {\n  font-size: 2.5vh;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n.meta {\n    flex-basis: calc(90% - 50vh);\n    background: rgba(2, 2, 2, 0.58);\n    padding: 70px;\n    height: 50vh;\n    margin-right: 10vh;\n}\n.meta > * {\n  transition: none !important;\n}\n.meta > h1 {\n  font-weight: 300;\n  font-size: 32px;\n  color: #fff;\n}\n.meta > p {\n  line-height: 1.3;\n  font-size: 16px;\n  color: #fff;\n}\n.meta a {\n  color: #fff;\n}\n.meta a:hover {\n  color: white;\n}\n@media (max-width: 750px) {\n.meta {\n    display: none;\n}\n}\n.route {\n  display: none;\n}\n*, *:before, *:after {\n  box-sizing: border-box;\n  position: relative;\n}\n\n", ""]);
 
 // exports
 
@@ -38270,31 +38300,84 @@ var render = function() {
         _c("div", { attrs: { id: "login" } }, [
           _c("div", { staticClass: "login-view" }, [
             _c("header", { staticClass: "login-header" }, [
-              _c("h1", [_vm._v("Hi")]),
-              _vm._v("\n              Welcome ," + _vm._s(_vm.name)),
+              _c("h1", [
+                _vm._v("Hi "),
+                _vm.name ? _c("p", [_vm._v(_vm._s(_vm.name))]) : _vm._e()
+              ]),
+              _vm._v("\n              Welcome ,"),
               _c("br"),
               _vm._v(" "),
               _vm._m(1)
             ]),
             _vm._v(" "),
-            _c("input", {
-              attrs: {
-                type: "email",
-                required: "",
-                pattern: ".*\\.\\w{2,}",
-                placeholder: "Email Address"
-              }
-            }),
+            _vm.errorMassageBox
+              ? _c("div", [_vm._v(_vm._s(_vm.errorMassage))])
+              : _vm._e(),
             _vm._v(" "),
-            _c("input", {
-              attrs: { type: "password", required: "", placeholder: "Password" }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "login-button", attrs: { href: "#" } },
-              [_vm._v("Login")]
-            ),
+            _c("form", { attrs: { action: "/verifyuser", method: "post" } }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.email,
+                    expression: "email"
+                  }
+                ],
+                attrs: {
+                  type: "email",
+                  name: "email",
+                  required: "",
+                  pattern: ".*\\.\\w{2,}",
+                  placeholder: "Email Address"
+                },
+                domProps: { value: _vm.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.email = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.password,
+                    expression: "password"
+                  }
+                ],
+                attrs: {
+                  type: "password",
+                  name: "password",
+                  required: "",
+                  placeholder: "Password"
+                },
+                domProps: { value: _vm.password },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.password = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "login-button",
+                  attrs: { href: "#", type: "submit" },
+                  on: { click: _vm.formsubmit }
+                },
+                [_vm._v("Login")]
+              )
+            ]),
             _vm._v(" "),
             _c(
               "svg",
@@ -38375,15 +38458,9 @@ var staticRenderFns = [
         _vm._v("\n          Lorem ipsum dolor sit amet"),
         _c("br"),
         _vm._v("\n          Lorem ipsum dolor sit amet "),
-        _c(
-          "a",
-          {
-            attrs: {
-              href: "https://dribbble.com/shots/2580453-Health-login-Login"
-            }
-          },
-          [_vm._v("Lorem ipsum dolor sit amet")]
-        )
+        _c("a", { attrs: { href: "#" } }, [
+          _vm._v("Lorem ipsum dolor sit amet")
+        ])
       ]),
       _vm._v(" "),
       _c("p", [
@@ -50838,8 +50915,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\CISPL-SUMIT\Desktop\Personal\Sumit Git\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\CISPL-SUMIT\Desktop\Personal\Sumit Git\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
