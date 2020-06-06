@@ -6,7 +6,7 @@
         <h1>Lorem ipsum dolor sit amet</h1>
         <p>
             Lorem ipsum dolor sit amet<br />
-            Lorem ipsum dolor sit amet <a href="https://dribbble.com/shots/2580453-Health-login-Login">Lorem ipsum dolor sit amet</a>
+            Lorem ipsum dolor sit amet <a href="#">Lorem ipsum dolor sit amet</a>
         </p>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque libero in viverra feugiat. <strong>Login</strong> to see the effect.
@@ -18,15 +18,15 @@
     <div id="login">
         <div class="login-view">
             <header class="login-header">
-                <h1>Hi</h1>
-                Welcome ,{{ name }}<br />
+                <h1>Hi <p v-if="name">{{name}}</p></h1>
+                Welcome ,<br />
                 <span class="login-subheading">Our Online<br />Platform.</span>
             </header>
+            <div v-if="errorMassageBox">{{errorMassage}}</div>
             <form action="/verifyuser" method="post">
-                <input type="email" name="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
-                <input type="password" name="password" required placeholder="Password" />
-                <!--<button action="/verifyuser" class="login-button">Login</button> -->
-                <input type="submit" class="login-button" value="Login">
+                <input type="email" name="email" required pattern=".*\.\w{2,}" placeholder="Email Address" v-model="email"/>
+                <input type="password" name="password" required placeholder="Password" v-model="password"/>
+                <button href="#" type="submit" class="login-button" @click="formsubmit">Login</button>
             </form>
             <!-- <div class="login-register">
                 Don't have an account? <a>Sign Up</a>
@@ -50,14 +50,39 @@
 
 <script>
 export default {
-    data: {
-        name: 'Bikash'
+  data() {
+    return {
+      placeholder:'',
+      name: 'dabo',
+      email: '',
+      password: '',
+      errorMassageBox: true,
+      errorMassage: "Please Enter login details !!",
     }
+  },
+  methods: {
+    csrf() {
+      return this.$attrs['data-csrf'];
+    },
+    formsubmit() {
+      this.errorMassageBox = false;
+      if (this.email == '') {
+        this.errorMassageBox = true;
+        this.errorMassage = "Please Enter Email!!";
+        return false;
+      }
+      if (this.password == '') {
+        this.errorMassageBox = true;
+        this.errorMassage = "Please Enter password!!";
+        return false;
+      }
+    }
+  }
 }
 </script>
 
 <style>
-		@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 * {
   -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
@@ -166,6 +191,7 @@ input:not(:valid) ~ .login-button {
     padding: .7vh 7vh;
     position: absolute;
     bottom: 10vh;
+    /*bottom: -27vh;*/
     font-weight: 500;
     box-shadow: none;
     border: 1px solid #000;

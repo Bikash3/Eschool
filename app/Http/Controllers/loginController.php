@@ -13,12 +13,7 @@ class loginController extends Controller
         return view ('login');
     }
     function verify (Request $request){
-        dd($request);
-    }
-    function teacher (){
-        echo "teacher";
-    }
-    function student (){
-        echo "Student";
+        echo "details";
+        //dd($request);
     }
 }
