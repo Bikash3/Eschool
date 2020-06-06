@@ -13,7 +13,6 @@ class loginController extends Controller
         return view ('login');
     }
     function verify (Request $request){
-        echo "details";
-        //dd($request);
+        dd($request);
     }
 }

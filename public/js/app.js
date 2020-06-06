@@ -38374,7 +38374,7 @@ var render = function() {
   return _c(
     "form",
     {
-      attrs: { action: "/verifyuser", method: "post" },
+      attrs: { action: "/login/verify", method: "post" },
       on: { submit: _vm.formsubmit }
     },
     [
