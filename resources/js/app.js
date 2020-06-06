@@ -19,11 +19,16 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('login', require('./components/loginComponent.vue').default);
 Vue.component('login-notice', require('./components/login/loginNotice.vue').default);
 Vue.component('login-form', require('./components/login/loginForm.vue').default);
 
-Vue.component('login', require('./components/loginComponent.vue').default);
+Vue.component('dashboard', require('./components/dashboardComponent.vue').default);
+Vue.component('dashboard-navManu', require('./components/dashboardNavManu.vue').default);
+Vue.component('dashboard-header', require('./components/dashboardHeader.vue').default);
+Vue.component('dashboard-footer', require('./components/dashboardFooter.vue').default);
+Vue.component('dashboard-body', require('./components/dashboardBody.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
