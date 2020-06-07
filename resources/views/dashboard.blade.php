@@ -1,4 +1,4 @@
 @extends('layout.main')
 @section('content')
-<login>@csrf</login>
+<dashboard></dashboard>
 @endsection

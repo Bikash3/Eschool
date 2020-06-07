@@ -1,56 +1,18 @@
 <template>
   <div>
-  <div class="container">
-  <div class="row align-items-center">
-    <aside class="meta">
-        <h1>Lorem ipsum dolor sit amet</h1>
-        <p>
-            Lorem ipsum dolor sit amet<br />
-            Lorem ipsum dolor sit amet <a href="#">Lorem ipsum dolor sit amet</a>
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque libero in viverra feugiat. <strong>Login</strong> to see the effect.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-    </aside>
-    <div id="login">
-        <div class="login-view">
-            <header class="login-header">
-                <h1>Hi <p v-if="name">{{name}}</p></h1>
-                Welcome ,<br />
-                <span class="login-subheading">Our Online<br />Platform.</span>
-            </header>
-            <div v-if="errorMassageBox">{{errorMassage}}</div>
-            <form action="/verifyuser" method="post">
-                <input type="email" name="email" required pattern=".*\.\w{2,}" placeholder="Email Address" v-model="email"/>
-                <input type="password" name="password" required placeholder="Password" v-model="password"/>
-                <button href="#" type="submit" class="login-button" @click="formsubmit">Login</button>
-            </form>
-            <!-- <div class="login-register">
-                Don't have an account? <a>Sign Up</a>
-                </div>-->
-            <svg id="svg-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.2 152.7" xml:space="preserve">
-                <path class="st0" d="M37.7,107.3h222.6c12,0,21.8,9.7,21.8,21.7s-9.7,21.8-21.8,21.8c0,0-203.6,0-222.6,0S2.2,138.6,2.2,103.3   c0-52,113.5-101.5,141-101.5c13.5,0,21.8,9.7,21.8,21.8s-9.7,21.7-21.8,21.7s-21.8-9.7-21.8-21.7s9.7-21.8,21.8-21.8" />
-                <path class="st1" d="M260.2,76.3L250,87.8l-9-9c-6.2-6.2,2-24.7,17.2-24.7c15.2,0,23.9,17.7,23.9,29.7s-11.7,23.5-23.9,23.5h-10.2"></path>
-                <g class="svg-loader" xmlns="http://www.w3.org/2000/svg">
-                    <path class="svg-loader-segment -cal" d="M164.7,23.5c0-12-9.7-21.8-21.8-21.8" />
-                    <path class="svg-loader-segment -heart" d="M143,45.2c12,0,21.8-9.7,21.8-21.7" />
-                    <path class="svg-loader-segment -steps" d="M121.2,23.5c0,12,9.7,21.7,21.8,21.7" />
-                    <path class="svg-loader-segment -temp" d="M143,1.7c-12,0-21.8,9.7-21.8,21.8" />
-                </g>
-            </svg>
-        </div>
+     
+    <div class="container">
+      <div class="row align-items-center">
+        <login-notice></login-notice>
+        <login-form><slot></slot></login-form>
+      </div>
     </div>
-    </div>
-  </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  /*data() {
     return {
       placeholder:'',
       name: 'dabo',
@@ -77,7 +39,7 @@ export default {
         return false;
       }
     }
-  }
+  }*/
 }
 </script>
 
