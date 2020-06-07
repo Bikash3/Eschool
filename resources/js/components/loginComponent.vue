@@ -1,60 +1,50 @@
 <template>
   <div>
-  <div class="container">
-  <div class="row align-items-center">
-    <aside class="meta">
-        <h1>Lorem ipsum dolor sit amet</h1>
-        <p>
-            Lorem ipsum dolor sit amet<br />
-            Lorem ipsum dolor sit amet <a href="https://dribbble.com/shots/2580453-Health-login-Login">Lorem ipsum dolor sit amet</a>
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque libero in viverra feugiat. <strong>Login</strong> to see the effect.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-    </aside>
-    <div id="login">
-        <div class="login-view">
-            <header class="login-header">
-                <h1>Hi</h1>
-                Welcome ,{{name}}<br />
-                <span class="login-subheading">Our Online<br />Platform.</span>
-            </header>
-            <input type="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
-            <input type="password" required placeholder="Password" />
-            <button href="#" class="login-button">Login</button>
-            <!-- <div class="login-register">
-                Don't have an account? <a>Sign Up</a>
-                </div>-->
-            <svg id="svg-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.2 152.7" xml:space="preserve">
-                <path class="st0" d="M37.7,107.3h222.6c12,0,21.8,9.7,21.8,21.7s-9.7,21.8-21.8,21.8c0,0-203.6,0-222.6,0S2.2,138.6,2.2,103.3   c0-52,113.5-101.5,141-101.5c13.5,0,21.8,9.7,21.8,21.8s-9.7,21.7-21.8,21.7s-21.8-9.7-21.8-21.7s9.7-21.8,21.8-21.8" />
-                <path class="st1" d="M260.2,76.3L250,87.8l-9-9c-6.2-6.2,2-24.7,17.2-24.7c15.2,0,23.9,17.7,23.9,29.7s-11.7,23.5-23.9,23.5h-10.2"></path>
-                <g class="svg-loader" xmlns="http://www.w3.org/2000/svg">
-                    <path class="svg-loader-segment -cal" d="M164.7,23.5c0-12-9.7-21.8-21.8-21.8" />
-                    <path class="svg-loader-segment -heart" d="M143,45.2c12,0,21.8-9.7,21.8-21.7" />
-                    <path class="svg-loader-segment -steps" d="M121.2,23.5c0,12,9.7,21.7,21.8,21.7" />
-                    <path class="svg-loader-segment -temp" d="M143,1.7c-12,0-21.8,9.7-21.8,21.8" />
-                </g>
-            </svg>
-        </div>
+     
+    <div class="container">
+      <div class="row align-items-center">
+        <login-notice></login-notice>
+        <login-form><slot></slot></login-form>
+      </div>
     </div>
-    </div>
-  </div>
   </div>
 </template>
 
 <script>
 export default {
-    data: {
-        name: 'Bikash'
+  /*data() {
+    return {
+      placeholder:'',
+      name: 'dabo',
+      email: '',
+      password: '',
+      errorMassageBox: true,
+      errorMassage: "Please Enter login details !!",
     }
+  },
+  methods: {
+    csrf() {
+      return this.$attrs['data-csrf'];
+    },
+    formsubmit() {
+      this.errorMassageBox = false;
+      if (this.email == '') {
+        this.errorMassageBox = true;
+        this.errorMassage = "Please Enter Email!!";
+        return false;
+      }
+      if (this.password == '') {
+        this.errorMassageBox = true;
+        this.errorMassage = "Please Enter password!!";
+        return false;
+      }
+    }
+  }*/
 }
 </script>
 
-<style>
-		@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+<style scoped>
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 * {
   -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
@@ -163,6 +153,7 @@ input:not(:valid) ~ .login-button {
     padding: .7vh 7vh;
     position: absolute;
     bottom: 10vh;
+    /*bottom: -27vh;*/
     font-weight: 500;
     box-shadow: none;
     border: 1px solid #000;
