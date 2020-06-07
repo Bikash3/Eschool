@@ -13,7 +13,8 @@
 
 Route::get('/login', "loginController@index");
 Route::post('/login/verify', "loginController@verify")->name('verifyuser');
-Route::post('/dashboard/{id}', "loginController@verify")->name('dashboard');
+
+Route::get('/dashboard/{id}', "dashboardController@index")->name('dashboard');
 
 
 

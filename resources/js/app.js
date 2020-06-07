@@ -24,10 +24,10 @@ Vue.component('login-notice', require('./components/login/loginNotice.vue').defa
 Vue.component('login-form', require('./components/login/loginForm.vue').default);
 
 Vue.component('dashboard', require('./components/dashboardComponent.vue').default);
-Vue.component('dashboard-navManu', require('./components/dashboardNavManu.vue').default);
-Vue.component('dashboard-header', require('./components/dashboardHeader.vue').default);
-Vue.component('dashboard-footer', require('./components/dashboardFooter.vue').default);
-Vue.component('dashboard-body', require('./components/dashboardBody.vue').default);
+Vue.component('dashboard-navmanu', require('./components/dashboard/dashboardNavManu.vue').default);
+Vue.component('dashboard-header', require('./components/dashboard/dashboardHeader.vue').default);
+Vue.component('dashboard-footer', require('./components/dashboard/dashboardFooter.vue').default);
+Vue.component('dashboard-body', require('./components/dashboard/dashboardBody.vue').default);
 
 
 /**
