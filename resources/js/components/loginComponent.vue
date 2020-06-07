@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 * {
   -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
