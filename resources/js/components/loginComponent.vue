@@ -3,43 +3,30 @@
      
     <div class="container">
       <div class="row align-items-center">
-        <login-notice></login-notice>
-        <login-form><slot></slot></login-form>
+        <LoginNotice></LoginNotice>
+        <LoginForm><slot></slot></LoginForm>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import LoginNotice from './login/loginNotice.vue'
+import LoginForm from './login/loginForm.vue'
+
 export default {
-  /*data() {
+  data() {
     return {
-      placeholder:'',
-      name: 'dabo',
-      email: '',
-      password: '',
-      errorMassageBox: true,
-      errorMassage: "Please Enter login details !!",
+      
     }
   },
   methods: {
-    csrf() {
-      return this.$attrs['data-csrf'];
-    },
-    formsubmit() {
-      this.errorMassageBox = false;
-      if (this.email == '') {
-        this.errorMassageBox = true;
-        this.errorMassage = "Please Enter Email!!";
-        return false;
-      }
-      if (this.password == '') {
-        this.errorMassageBox = true;
-        this.errorMassage = "Please Enter password!!";
-        return false;
-      }
-    }
-  }*/
+    
+  },
+  components: {
+    LoginNotice,
+    LoginForm
+  }
 }
 </script>
 <style>

@@ -8,7 +8,7 @@ class dashboardController extends Controller
 {
     //
     function index($id) {
-        echo $id;
+        // echo $id;
         return view('dashboard');
     }
 }
