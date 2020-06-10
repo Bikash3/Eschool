@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class dashboardController extends Controller
 {
     //
-    function index() {
-        //echo $id;
+    function index($id) {
+        // echo $id;
         return view('dashboard');
     }
 }
