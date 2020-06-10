@@ -3572,10 +3572,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _dashboard_dashboardNavManu_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard/dashboardNavManu.vue */ "./resources/js/components/dashboard/dashboardNavManu.vue");
-/* harmony import */ var _dashboard_dashboardHeader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard/dashboardHeader.vue */ "./resources/js/components/dashboard/dashboardHeader.vue");
-/* harmony import */ var _dashboard_dashboardFooter_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard/dashboardFooter.vue */ "./resources/js/components/dashboard/dashboardFooter.vue");
-/* harmony import */ var _dashboard_dashboardBody_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dashboard/dashboardBody.vue */ "./resources/js/components/dashboard/dashboardBody.vue");
+/* harmony import */ var _dashboard_dashboardBody_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard/dashboardBody.vue */ "./resources/js/components/dashboard/dashboardBody.vue");
 //
 //
 //
@@ -3588,16 +3585,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    Navmanu: _dashboard_dashboardNavManu_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Header: _dashboard_dashboardHeader_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Footer: _dashboard_dashboardFooter_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Body: _dashboard_dashboardBody_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    MainPage: _dashboard_dashboardBody_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -46945,7 +46936,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("Navmanu"),
+      _c("dash-nav"),
       _vm._v(" "),
       _c(
         "div",
@@ -46953,7 +46944,13 @@ var render = function() {
           staticClass: "d-flex flex-column flex-row-fluid wrapper",
           attrs: { id: "kt_wrapper" }
         },
-        [_c("Header"), _vm._v(" "), _c("Body"), _vm._v(" "), _c("Footer")],
+        [
+          _c("dash-head"),
+          _vm._v(" "),
+          _c("MainPage"),
+          _vm._v(" "),
+          _c("dash-foot")
+        ],
         1
       )
     ],
@@ -59416,6 +59413,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('login', __webpack_require__(/*! ./components/loginComponent.vue */ "./resources/js/components/loginComponent.vue")["default"]);
 Vue.component('dashboard', __webpack_require__(/*! ./components/dashboardComponent.vue */ "./resources/js/components/dashboardComponent.vue")["default"]);
+Vue.component('dash-nav', __webpack_require__(/*! ./components/dashboard/dashboardNavManu.vue */ "./resources/js/components/dashboard/dashboardNavManu.vue")["default"]);
+Vue.component('dash-head', __webpack_require__(/*! ./components/dashboard/dashboardHeader.vue */ "./resources/js/components/dashboard/dashboardHeader.vue")["default"]);
+Vue.component('dash-foot', __webpack_require__(/*! ./components/dashboard/dashboardFooter.vue */ "./resources/js/components/dashboard/dashboardFooter.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

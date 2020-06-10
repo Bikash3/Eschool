@@ -1,27 +1,21 @@
 <template>
     <div>
-        <Navmanu></Navmanu>
+        <dash-nav></dash-nav>
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-            <Header></Header>
-            <Body></Body>
-            <Footer></Footer>
+            <dash-head></dash-head>
+            <MainPage></MainPage>
+            <dash-foot></dash-foot>
         </div>
     </div>
 </template>
 
 <script>
-import Navmanu from './dashboard/dashboardNavManu.vue'
-import Header from './dashboard/dashboardHeader.vue'
-import Footer from './dashboard/dashboardFooter.vue'
-import Body from './dashboard/dashboardBody.vue'
+import MainPage from './dashboard/dashboardBody.vue'
 
 export default {
     components: {
-        Navmanu,
-        Header,
-        Footer,
-        Body
+        MainPage
     }
 }
 </script>
