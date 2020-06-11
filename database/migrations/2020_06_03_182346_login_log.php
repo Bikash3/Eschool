@@ -13,10 +13,13 @@ class LoginLog extends Migration
      */
     public function up()
     {
-        Schema::create('login', function (Blueprint $table) {
+        Schema::create('login_logs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id');
             $table->ipAddress('ip_address');
+            $table->string('status')->nullable();
+            $table->string('mac')->nullable();
+            $table->longText('browser')->nullable();
             $table->timestamps();
         });
     }
@@ -29,5 +32,8 @@ class LoginLog extends Migration
     public function down()
     {
         //
+        Schema::table('login_logs', function (Blueprint $table) {
+            $table->dropIfExists('login_logs');
+        });
     }
 }
