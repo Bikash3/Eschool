@@ -21,6 +21,9 @@ window.Vue = require('vue');
 
 Vue.component('login', require('./components/loginComponent.vue').default);
 Vue.component('dashboard', require('./components/dashboardComponent.vue').default);
+Vue.component('dash-nav', require('./components/dashboard/dashboardNavManu.vue').default);
+Vue.component('dash-head', require('./components/dashboard/dashboardHeader.vue').default);
+Vue.component('dash-foot', require('./components/dashboard/dashboardFooter.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
