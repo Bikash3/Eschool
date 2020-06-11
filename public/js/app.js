@@ -8193,7 +8193,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/dashboard/dashboardBody.vue?vue&type=style&index=0&id=3d8f8c20&scoped=true&lang=css&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/dashboard/dashboardBody.vue?vue&type=style&index=0&id=3d8f8c20&scoped=true&lang=css& ***!
@@ -8250,16 +8249,10 @@ exports.push([module.i, "\n", ""]);
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loginComponent.vue?vue&type=style&index=0&id=413f4ec2&scoped=true&lang=css&":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/loginComponent.vue?vue&type=style&index=0&id=413f4ec2&scoped=true&lang=css& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************/
-=======
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/login/loginForm.vue?vue&type=style&index=0&id=55fd71ac&scoped=true&lang=css&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/login/loginForm.vue?vue&type=style&index=0&id=55fd71ac&scoped=true&lang=css& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************/
->>>>>>> 487687705684ff245e802bdac4e20b03fbf31b8c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -60215,8 +60208,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\CISPL-SUMIT\Desktop\Personal\Sumit Git\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\CISPL-SUMIT\Desktop\Personal\Sumit Git\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
