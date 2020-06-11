@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class student extends Model
+class students extends Model
 {
     protected $fillable = [
         'reg_id', 
@@ -14,7 +14,7 @@ class student extends Model
         'gender', 
         'd_o_b', 
         'class', 
-        'stream', 
+        'stream',
         'phone', 
         'email', 
         'password'

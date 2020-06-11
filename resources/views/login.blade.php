@@ -1,4 +1,4 @@
 @extends('layout.main')
 @section('content')
-<login>@csrf</login>
+<login data-error="{{session('errormsg')}}" data-csrf='@csrf'>@csrf</login>
 @endsection
