@@ -1,11 +1,13 @@
 <template>
-    <div>
-        <dash-nav></dash-nav>
-        <!--begin::Wrapper-->
-        <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-            <dash-head></dash-head>
-            <MainPage></MainPage>
-            <dash-foot></dash-foot>
+    <div class="d-flex flex-column flex-root">
+        <div class="d-flex flex-row flex-column-fluid page">
+            <dash-nav></dash-nav>
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <dash-head></dash-head>
+                <MainPage></MainPage>
+                <dash-foot></dash-foot>
+            </div>
         </div>
     </div>
 </template>
