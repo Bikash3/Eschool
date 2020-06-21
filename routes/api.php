@@ -11,8 +11,19 @@ use App\User;
 //     return $request->user();
 // });
 
-// Route::post('/student', function () {
-//     return StudentResource::collection(student::all());
-// });
+Route::get('/student', function () {
+    return StudentResource::collection(students::all());
+});
 
-Route::apiResource('/students','dashboardController');
+//Route::apiResource('/students','dashboardController');
+
+Route::get('/student_all', 'api\student@index');
+
+// Route::get('student/{id}', function ($id){
+//     return 'students '.$id;
+
+// })->where('name', 'student1');
+
+Route::get('student_edit/{id}', 'api\student@edit');
+
+Route::put('student_update/{id}', 'api\student@update');
