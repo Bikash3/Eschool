@@ -1,23 +1,28 @@
 <template>
-    <div class="d-flex flex-column flex-root">
-        <div class="d-flex flex-row flex-column-fluid page">
-            <dash-nav></dash-nav>
-            <!--begin::Wrapper-->
-            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-                <dash-head></dash-head>
-                <MainPage></MainPage>
-                <dash-foot></dash-foot>
+    <div class="">
+        <div class="d-flex flex-column flex-root header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable">
+            <div class="d-flex flex-row flex-column-fluid page">
+                <dash-nav></dash-nav>
+                <!--begin::Wrapper-->
+                <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                    <dash-head></dash-head>
+                    <MainPage></MainPage>
+                    <dash-foot></dash-foot>
+                </div>
             </div>
         </div>
+        <UserPop></UserPop>        
     </div>
 </template>
 
 <script>
 import MainPage from './dashboard/dashboardBody.vue'
+import UserPop from './dashboard/dashUserPop.vue'
 
 export default {
     components: {
-        MainPage
+        MainPage,
+        UserPop
     }
 }
 </script>

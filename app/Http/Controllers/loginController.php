@@ -46,7 +46,7 @@ class loginController extends Controller
                     $loginLog->status = 'Failed';
                     $loginLog->save();
                     return redirect('login')
-                                ->with('errormsg', 'Please enter valid Password');
+                            ->with('errormsg', 'Please enter valid Password');
                 }
             }
         } else {
