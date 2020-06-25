@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\employee as EmployeeResource;
 use App\Model\employees;
 
+
 class employee extends Controller
 {
     /**
@@ -62,7 +63,7 @@ class employee extends Controller
     public function edit($id)
     {
         //return 'employees '.$id;
-        return employees::where('emp_id', $id);
+        return EmployeeResource::collection(employees::where('emp_id', $id)->get());
 
     }
 

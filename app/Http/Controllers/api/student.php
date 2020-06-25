@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\student as StudentResource;
 use App\Model\students;
 
-// $student = new students();
-
 class student extends Controller
 {
     /**
@@ -64,7 +62,8 @@ class student extends Controller
     public function edit($id)
     {
         // return 'students '.$id;
-        return StudentResource::collection(students::where('reg_id', $id));
+        return StudentResource::collection(students::where('reg_id', $id)->get());
+        // return students::where('reg_id', $id);
 
     }
 

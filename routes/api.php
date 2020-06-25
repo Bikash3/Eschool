@@ -13,9 +13,9 @@ use App\User;
 //     return $request->user();
 // });
 
-Route::get('/student', function () {
-    return StudentResource::collection(students::all());
-});
+// Route::get('/student', function () {
+//     return StudentResource::collection(students::all());
+// });
 
 //Route::apiResource('/students','dashboardController');
 
