@@ -4007,7 +4007,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      name: 'Raoute'
+      name: 'Raute'
     };
   }
 });
@@ -64353,11 +64353,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _components_route_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/route.vue */ "./resources/js/components/route.vue");
+/* harmony import */ var _components_loginComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/loginComponent.vue */ "./resources/js/components/loginComponent.vue");
+
 
 var routes = [{
   path: '/route',
   component: _components_route_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-  name: 'Route'
+  name: 'route'
+}, {
+  path: '/login',
+  component: _components_loginComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 }];
 
 /***/ }),
@@ -64380,8 +64385,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Debalina\Self-Project\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Debalina\Self-Project\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
