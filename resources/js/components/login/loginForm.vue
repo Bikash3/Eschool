@@ -47,13 +47,10 @@ export default {
       errorEmail: false,
       errorPass: false,
       errorMassageEmail: '',
-      errorMassagePass: ''
+      errorMassagePass: '',
     }
   },
   methods: {
-    csrf() {
-      return this.$attrs['data-csrf'];
-    },
     formsubmit(e) {
       if (this.email && this.password) {
         this.errorEmail = false;

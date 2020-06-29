@@ -1,7 +1,9 @@
 import Route from './components/route.vue';
-import login from './components/loginComponent.vue';
+import Login from './components/loginComponent.vue';
+import Dashboard from './components/dashboardComponent.vue';
 
 export const routes = [
-    { path: '/route', component: Route, name: 'route' },
-    { path: '/login', component: login},
+    { path: '/vue', component: Route, name: 'route' },
+    { path: '/login', component: Login, name: 'login'},
+    { path: '/dashboard/:post/:id', component: Dashboard, name: 'dashboard'},
 ];
