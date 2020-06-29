@@ -41,18 +41,18 @@ class loginController extends Controller
                 if ($pass == $userEm->password) {
                     $loginLog->status = 'Success';
                     $loginLog->save();
-                    return redirect()->route('dashboard', ['id' => $userEm->emp_id]);
+                    return redirect('dashboard/'.$userEm->emp_type.'/'.$userEm->emp_id.'');
                 } else {
                     $loginLog->status = 'Failed';
                     $loginLog->save();
                     return redirect('login')
-                                ->with('errormsg', 'Please enter valid Password');
+                            ->with('errormsg', 'Please enter valid Password');
                 }
             }
         } else {
             if ($pass == $userStu->password) {
                 echo "Stu<br>pass matched";
-                return redirect()->route('dashboard', ['id' => $userStu->reg_id]);
+                return redirect('dashboard/student/'.$userStu->reg_id.'');
             } else {
                 return redirect('login')
                             ->with('errormsg', 'Please enter valid Password');

@@ -1,5 +1,6 @@
 <template>
   <div class="login-body">
+    
     <div v-if="errorMassage">{{errorMassage}}</div>
     <div class="container">
       <div class="row align-items-center">
@@ -18,7 +19,7 @@ export default {
   data() {
     return {
       errorMassage: this.$attrs['data-error'],
-      csrf: this.$attrs['data-csrf']
+      csrf: this.$attrs['data-crsf']
     }
   },
   methods: {

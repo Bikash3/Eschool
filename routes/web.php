@@ -11,11 +11,16 @@
 |
 */
 
-Route::get('/login', "loginController@index");
+// Route::get('/login', "loginController@index");
+
 Route::post('/login/verify', "loginController@verify")->name('verifyuser');
 
-Route::get('/dashboard/{id}', "dashboardController@index")->name('dashboard');
-
-
-
+// Route::get('/dashboard/{id}', "dashboardController@index")->name('dashboard');
+Route::get('/', function() {
+    return redirect('/login');
+});
+///// Setting Vue route ///////////
+Route::get('/{vue_capture?}', function () {
+    return view('index');
+})->where('vue_capture', '[\/\w\.-]*');
    

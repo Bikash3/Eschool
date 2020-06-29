@@ -1,18 +1,10 @@
 <?php
+// Student API Details
+Route::get('/student/all', 'api\student@index');
+Route::get('/student/single/{id}', 'api\student@edit');
+Route::put('/student/update/{id}', 'api\student@update');
 
-use Illuminate\Http\Request;
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Employee API details
+Route::get('/employee/all', 'api\employee@index');
+Route::get('/employee/single/{id}', 'api\employee@edit');
+Route::put('/employee/update/{id}', 'api\employee@update');
