@@ -6698,7 +6698,7 @@ var staticRenderFns = [
                           staticClass: "h-75 align-self-end",
                           attrs: {
                             src:
-                              "https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/avatars/004-boy-1.svg",
+                              "../004-boy-1.svg",
                             alt: ""
                           }
                         })
@@ -6718,7 +6718,7 @@ var staticRenderFns = [
                           staticClass: "h-75 align-self-end",
                           attrs: {
                             src:
-                              "https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/avatars/002-girl.svg",
+                              "../002-girl.svg",
                             alt: ""
                           }
                         })
@@ -7291,7 +7291,7 @@ var staticRenderFns = [
             staticClass: "h-50 align-self-center",
             attrs: {
               src:
-                "https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/006-plurk.svg",
+                "../006-plurk.svg",
               alt: ""
             }
           })
@@ -7385,7 +7385,7 @@ var staticRenderFns = [
             staticClass: "h-50 align-self-center",
             attrs: {
               src:
-                "https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/015-telegram.svg",
+                "../015-telegram.svg",
               alt: ""
             }
           })
@@ -7479,7 +7479,7 @@ var staticRenderFns = [
             staticClass: "h-50 align-self-center",
             attrs: {
               src:
-                "https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/003-puzzle.svg",
+                "../003-puzzle.svg",
               alt: ""
             }
           })
@@ -7573,7 +7573,7 @@ var staticRenderFns = [
             staticClass: "h-50 align-self-center",
             attrs: {
               src:
-                "https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/005-bebo.svg",
+                "../005-bebo.svg",
               alt: ""
             }
           })
@@ -7667,7 +7667,7 @@ var staticRenderFns = [
             staticClass: "h-50 align-self-center",
             attrs: {
               src:
-                "https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/014-kickstarter.svg",
+                "../014-kickstarter.svg",
               alt: ""
             }
           })
@@ -27429,8 +27429,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/cispl-admin/Documents/bik/localhost/custom/eschool/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\Work-Personal\Personal\Eschool\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! F:\Work-Personal\Personal\Eschool\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
