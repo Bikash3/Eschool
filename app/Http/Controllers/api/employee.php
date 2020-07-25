@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\employee as EmployeeResource;
 use App\Model\employees;
-
+use Response;
+use Auth;
 
 class employee extends Controller
 {
+    
+    
+    // public function __construct(){
+    //     $this->middleware('auth:api');
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -40,7 +46,27 @@ class employee extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $last_id = '';
+            $employees = new employees([
+                'emp_id' => $request->emp_id,
+                'name' => $request->name,
+                'address' => $request->address,
+                'gender' => $request->gender,
+                'emp_type' => $request->emp_type,
+                'subject' => $request->subject,
+                'phone' => $request->phone,
+                'email' => $request->email,
+                'password' => bcrypt($request->password)
+            ]);
+            $employees->save();
+            $last_id = $employees->id;
+            if(!empty($last_id) && isset($last_id)){
+                return Response::json(array('success' => true), 200);
+
+            }else{
+                return Response::json(array('success' => false), 400);
+
+            }                                                                                       
     }
 
     /**
@@ -84,9 +110,9 @@ class employee extends Controller
         $update_emp->emp_type = $request->emp_type;
         $update_emp->subject = $request->subject;
         $update_emp->phone = $request->phone;
-        $update_emp->email = $request->email;
+       // $update_emp->email = $request->email;
         $update_emp->save();
-        return true;
+        return Response::json(array('success' => true), 200);
     }
 
     /**
@@ -97,6 +123,8 @@ class employee extends Controller
      */
     public function destroy($id)
     {
-        //
+        $employe = employees::find($id);
+        $employe->delete();
+        return Response::json(array('success' => true), 200);
     }
 }
