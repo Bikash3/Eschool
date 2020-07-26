@@ -198,14 +198,14 @@
                                                 <!--begin::Symbol-->
                                                 <a href="#" class="symbol symbol-35 symbol-light-success mr-2">
                                                 <span class="symbol-label">
-                                                <img src="https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/avatars/004-boy-1.svg" class="h-75 align-self-end" alt=""/>
+                                                <img src="004-boy-1.svg" class="h-75 align-self-end" alt=""/>
                                                 </span>
                                                 </a>
                                                 <!--end::Symbol-->
                                                 <!--begin::Symbol-->
                                                 <a href="#" class="symbol symbol-35 symbol-light-success">
                                                 <span class="symbol-label">
-                                                <img src="https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/avatars/002-girl.svg" class="h-75 align-self-end" alt=""/>
+                                                <img src="002-girl.svg" class="h-75 align-self-end" alt=""/>
                                                 </span>
                                                 </a>
                                                 <!--end::Symbol-->
@@ -649,7 +649,7 @@
                                                 <td class="pl-0 py-4">
                                                    <div class="symbol symbol-50 symbol-light mr-1">
                                                       <span class="symbol-label">
-                                                      <img src="https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/006-plurk.svg" class="h-50 align-self-center" alt=""/>
+                                                      <img src="006-plurk.svg" class="h-50 align-self-center" alt=""/>
                                                       </span>
                                                    </div>
                                                 </td>
@@ -722,7 +722,7 @@
                                                 <td class="pl-0 py-4">
                                                    <div class="symbol symbol-50 symbol-light">
                                                       <span class="symbol-label">
-                                                      <img src="https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/015-telegram.svg" class="h-50 align-self-center" alt=""/>
+                                                      <img src="015-telegram.svg" class="h-50 align-self-center" alt=""/>
                                                       </span>
                                                    </div>
                                                 </td>
@@ -795,7 +795,7 @@
                                                 <td class="pl-0 py-4">
                                                    <div class="symbol symbol-50 symbol-light">
                                                       <span class="symbol-label">
-                                                      <img src="https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/003-puzzle.svg" class="h-50 align-self-center" alt=""/>
+                                                      <img src="003-puzzle.svg" class="h-50 align-self-center" alt=""/>
                                                       </span>
                                                    </div>
                                                 </td>
@@ -868,7 +868,7 @@
                                                 <td class="pl-0 py-4">
                                                    <div class="symbol symbol-50 symbol-light">
                                                       <span class="symbol-label">
-                                                      <img src="https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/005-bebo.svg" class="h-50 align-self-center" alt=""/>
+                                                      <img src="005-bebo.svg" class="h-50 align-self-center" alt=""/>
                                                       </span>
                                                    </div>
                                                 </td>
@@ -941,7 +941,7 @@
                                                 <td class="pl-0 py-4">
                                                    <div class="symbol symbol-50 symbol-light">
                                                       <span class="symbol-label">
-                                                      <img src="https://keenthemes.com/metronic/themes/metronic/theme/html/demo1/dist/assets/media/svg/misc/014-kickstarter.svg" class="h-50 align-self-center" alt=""/>
+                                                      <img src="014-kickstarter.svg" class="h-50 align-self-center" alt=""/>
                                                       </span>
                                                    </div>
                                                 </td>

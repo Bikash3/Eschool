@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\student as StudentResource;
 use App\Model\students;
+use Response;
 
 class student extends Controller
 {
@@ -39,7 +40,31 @@ class student extends Controller
      */
     public function store(Request $request)
     {
-        //
+                $last_id = '';
+                $student = new students([
+                    'reg_id' => $request->reg_id,
+                    'name' => $request->name,
+                    'guardian_name' => $request->guardian_name,
+                    'address' => $request->address,
+                    'gender' => $request->gender,
+                    'd_o_b' => $request->d_o_b,
+                    'class' => $request->class,
+                    'stream' => $request->stream,
+                    'phone' => $request->phone,
+                    'email' => $request->email,
+                    'password' => bcrypt($request->password)
+                ]);
+                $student->save();
+                $last_id = $student->id;
+                if(!empty($last_id) && isset($last_id)){
+                    return Response::json(array('success' => true), 200);
+
+                }else{
+                    return Response::json(array('success' => false), 400);
+
+                }
+        
+        
     }
 
     /**
@@ -86,9 +111,9 @@ class student extends Controller
         $update_stu->class = $request->class;
         $update_stu->stream = $request->stream;
         $update_stu->phone = $request->phone;
-        $update_stu->email = $request->email;
+      //  $update_stu->email = $request->email;
         $update_stu->save();
-        return true;
+        return Response::json(array('success' => true), 200);
     }
 
     /**
@@ -99,6 +124,8 @@ class student extends Controller
      */
     public function destroy($id)
     {
-        //
+        $student = students::find($id);
+        $student->delete();
+        return Response::json(array('success' => true), 200);
     }
 }
