@@ -51,7 +51,7 @@ class loginController extends Controller
             }
         } else {
             if ($pass == $userStu->password) {
-                echo "Stu<br>pass matched";
+                //echo "Stu<br>pass matched";
                 return redirect('dashboard/student/'.$userStu->reg_id.'');
             } else {
                 return redirect('login')

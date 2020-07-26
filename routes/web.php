@@ -11,11 +11,8 @@
 |
 */
 
-// Route::get('/login', "loginController@index");
-
 Route::post('/login/verify', "loginController@verify")->name('verifyuser');
 
-// Route::get('/dashboard/{id}', "dashboardController@index")->name('dashboard');
 Route::get('/', function() {
     return redirect('/login');
 });
