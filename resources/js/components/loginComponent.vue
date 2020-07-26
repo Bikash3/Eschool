@@ -5,7 +5,10 @@
     <div class="container">
       <div class="row align-items-center">
         <LoginNotice></LoginNotice>
-        <LoginForm><slot></slot></LoginForm>
+        <LoginForm 
+          :data-csrf="crsf"
+        >
+        </LoginForm>
       </div>
     </div>
   </div>
@@ -16,14 +19,11 @@ import LoginNotice from './login/loginNotice.vue'
 import LoginForm from './login/loginForm.vue'
 
 export default {
+  props: ['dataCrsf'],
   data() {
     return {
-      errorMassage: this.$attrs['data-error'],
-      csrf: this.$attrs['data-crsf']
+      crsf: this.dataCrsf
     }
-  },
-  methods: {
-    
   },
   components: {
     LoginNotice,
@@ -47,5 +47,4 @@ export default {
     background-size: cover;
     height: 100vh;
   }
-
 </style>

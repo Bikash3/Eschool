@@ -1,8 +1,6 @@
 <template>
 <form action="/login/verify" method="post" @submit="formsubmit">
-    <slot>
-         <!-- CSRF gets injected into this slot -->
-    </slot>
+    <input type="hidden" name="_token" :value="csrf">
     <div id="login">
         <div class="login-view">
             <header class="login-header">
@@ -34,20 +32,24 @@
             </svg>
         </div>
     </div>
+    <!-- <button @click="axios()">ajax submit</button> -->
 </form>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
+  props:['dataCsrf'],
   data() {
     return {
-      name: 'dabo',
+      name: 'Bikash',
       email: '',
       password: '',
       errorEmail: false,
       errorPass: false,
       errorMassageEmail: '',
       errorMassagePass: '',
+      csrf: this.dataCsrf
     }
   },
   methods: {
@@ -66,6 +68,15 @@ export default {
         this.errorMassagePass = "Please Enter Valid Password!!";
       }
       e.preventDefault();
+    },
+    axios() {
+      axios.post('/api/verify', {'email':this.email, 'password':this.password})
+        .then(function(res){
+          console.log(res)
+        })
+        .catch(function(err){
+          console.error(err)
+        });
     }
   }
 }
