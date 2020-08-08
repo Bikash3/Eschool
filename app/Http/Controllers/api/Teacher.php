@@ -5,11 +5,11 @@ namespace App\Http\Controllers\api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\employee as EmployeeResource;
-use App\Model\employees;
+use App\Model\User;
 use Response;
 use Auth;
 
-class employee extends Controller
+class Teacher extends Controller
 {
     
     
@@ -24,7 +24,7 @@ class employee extends Controller
     public function index()
     {
         
-        return EmployeeResource::collection(employees::all());
+        return EmployeeResource::collection(User::all());
 
     }
 
@@ -47,7 +47,7 @@ class employee extends Controller
     public function store(Request $request)
     {
             $last_id = '';
-            $employees = new employees([
+            $User = new User([
                 'emp_id' => $request->emp_id,
                 'name' => $request->name,
                 'address' => $request->address,
@@ -58,8 +58,8 @@ class employee extends Controller
                 'email' => $request->email,
                 'password' => bcrypt($request->password)
             ]);
-            $employees->save();
-            $last_id = $employees->id;
+            $User->save();
+            $last_id = $User->id;
             if(!empty($last_id) && isset($last_id)){
                 return Response::json(array('success' => true), 200);
 
@@ -88,8 +88,8 @@ class employee extends Controller
      */
     public function edit($id)
     {
-        //return 'employees '.$id;
-        return EmployeeResource::collection(employees::where('emp_id', $id)->get());
+        //return 'User '.$id;
+        return EmployeeResource::collection(User::where('emp_id', $id)->get());
 
     }
 
@@ -102,7 +102,7 @@ class employee extends Controller
      */
     public function update(Request $request, $id)
     {
-        $employee = new employees();
+        $employee = new User();
         $update_emp = $employee::where('emp_id', $id)->first();
         $update_emp->name = $request->name;
         $update_emp->address = $request->addrees;
@@ -123,7 +123,7 @@ class employee extends Controller
      */
     public function destroy($id)
     {
-        $employe = employees::find($id);
+        $employe = User::find($id);
         $employe->delete();
         return Response::json(array('success' => true), 200);
     }

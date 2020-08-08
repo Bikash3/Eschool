@@ -1,9 +1,12 @@
-import Route from './components/route.vue';
-import Login from './components/loginComponent.vue';
-import Dashboard from './components/dashboardComponent.vue';
+import Login from './components/login/loginComponent.vue';
+import Dashboard from './components/dashboard/section/dash/dashboardComponent.vue';
+import TeacherAdd from './components/dashboard/section/teacher/teacheraddComponent.vue';
+import TeacherAll from './components/dashboard/section/teacher/teacherallComponent.vue';
+
 
 export const routes = [
-    { path: '/vue', component: Route, name: 'route' },
     { path: '/login', component: Login, name: 'login'},
     { path: '/dashboard/:post/:id', component: Dashboard, name: 'dashboard'},
+    { path: '/teacher/add', component: TeacherAdd, name: 'teacheradd'},
+    { path: '/teacher/all', component: TeacherAll, name: 'teacherall'},
 ];

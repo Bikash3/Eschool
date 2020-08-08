@@ -1,5 +1,7 @@
 <template>
   <div class="login-body">
+    <span :class="{ err: wrongpass, 'err-em': wrongemail  }">{{error}}</span>
+    <!-- <span class="err-em">Email address wrong</span> -->
     
     <div v-if="errorMassage">{{errorMassage}}</div>
     <div class="container">
@@ -7,6 +9,8 @@
         <LoginNotice></LoginNotice>
         <LoginForm 
           :data-csrf="crsf"
+          @error="setMessage"
+          :msg="error"
         >
         </LoginForm>
       </div>
@@ -15,20 +19,31 @@
 </template>
 
 <script>
-import LoginNotice from './login/loginNotice.vue'
-import LoginForm from './login/loginForm.vue'
+import LoginNotice from './loginNotice.vue'
+import LoginForm from './loginForm.vue'
 
 export default {
   props: ['dataCrsf'],
   data() {
     return {
-      crsf: this.dataCrsf
+      crsf: this.dataCrsf,
+      error: null,
+      wrongpass: true,
+      wrongemail: false
     }
   },
   components: {
     LoginNotice,
     LoginForm
-  }
+  },
+  methods: {
+    setMessage(msg) {
+      this.error = msg.errormsg;
+    }
+  },
+  mounted: function() {
+    this.$store.commit('addcsfc', this.crsf)
+   }
 }
 </script>
 <style>
@@ -46,5 +61,17 @@ export default {
  background: url(/images/bg.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
+  }
+  .err {
+    display: block;
+    top: calc(58% + 16.5vh);
+    position: absolute;
+    left: 6.5vh;
+  }
+  .err-em {
+    position: absolute;
+    left: 6.5vh;
+    top: 56%;
+    color: #ff0101;
   }
 </style>

@@ -6,39 +6,38 @@
                 <!--begin::Wrapper-->
                 <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" >
                     <dash-head :data-user="userName"></dash-head>
-                    <MainPage></MainPage>
+                    <component :is="compo"></component>
                     <dash-foot></dash-foot>
                 </div>
             </div>
         </div>
-        <UserPop :data-userdetails="userData"></UserPop>
+        <dash-user-pop :data-userdetails="userData"></dash-user-pop>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
-
-import MainPage from './dashboard/dashboardBody.vue'
-import UserPop from './dashboard/dashUserPop.vue'
+import MainPage from './dashboardBody.vue';
 
 export default {
     data() {
       return {
-         userData: [],
+         compo: MainPage,
+         userData: {},
          userName: null,
          url: this.$route.params.post == 'teacher' ? '/api/employee/single/'+this.$route.params.id : 
               this.$route.params.post == 'staff'? '/api/employee/single/'+ this.$route.params.id : '/api/student/single/'+ this.$route.params.id
       }
    },
     components: {
-        MainPage,
-        UserPop
+        MainPage
     },
     methods: {
       userDetails() {
         axios
         .get(this.url)
         .then(res => (
+            console.log(res),
             this.userName = res.data.data[0].name, 
             this.userData = res.data.data[0]
         ))
@@ -47,8 +46,9 @@ export default {
         });
       }
    },
-   mounted() {
-       this.userDetails()
+   mounted: function() {
+    this.userDetails(),
+    this.$store.commit('addUserData', this.userData)
    }
 }
 </script>

@@ -18,7 +18,7 @@ class LoginLog extends Migration
             $table->string('user_id');
             $table->ipAddress('ip_address');
             $table->string('status')->nullable();
-            $table->string('mac')->nullable();
+            $table->macAddress('mac')->nullable();
             $table->longText('browser')->nullable();
             $table->timestamps();
         });

@@ -4,19 +4,15 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class students extends Model
+class Students extends Model
 {
     protected $fillable = [
         'reg_id', 
-        'name', 
+        'user_id', 
         'guardian_name', 
-        'address', 
-        'gender', 
-        'd_o_b', 
         'class', 
         'stream',
-        'phone', 
-        'email', 
-        'password'
+        'e_class_id',
+        'status'
     ];
 }

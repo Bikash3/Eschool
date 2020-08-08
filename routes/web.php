@@ -11,7 +11,7 @@
 |
 */
 
-Route::post('/login/verify', "loginController@verify")->name('verifyuser');
+// Route::post('/login/verify', "loginController@verify")->name('verifyuser');
 
 Route::get('/', function() {
     return redirect('/login');

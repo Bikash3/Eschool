@@ -4,15 +4,10 @@
 use Illuminate\Auth\Access\Response;
 use Illuminate\Http\Request;
 
-Route::post('/verify', function(){
-    if(Route::ajax()){
-        // $ajax = array(
-        //     'ajax'=> Route::ajax(),
-        //     'response'=> Response::Json(Request::all())
-        // );
-        return "api worked";
-    }
-});
+// Login verification
+Route::post('/login/verify', "loginController@verify")->name('verifyuser');
+
+// User API
 
 // Student API Details
 Route::get('/student/all', 'api\student@index');

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import {routes} from './routes';
 import {filters} from './filter';
+import {store} from './store';
 
 Vue.use(VueRouter);
 
@@ -11,12 +12,14 @@ const router = new VueRouter({
     routes
 });
 
-Vue.component('dash-nav', require('./components/dashboard/dashboardNavManu.vue').default);
-Vue.component('dash-head', require('./components/dashboard/dashboardHeader.vue').default);
-Vue.component('dash-foot', require('./components/dashboard/dashboardFooter.vue').default);
+Vue.component('dash-nav', require('./components/dashboard/include/dashboardNavManu.vue').default);
+Vue.component('dash-head', require('./components/dashboard/include/dashboardHeader.vue').default);
+Vue.component('dash-foot', require('./components/dashboard/include/dashboardFooter.vue').default);
+Vue.component('dash-user-pop', require('./components/dashboard/include/dashUserPop.vue').default);
 
 new Vue({
   el: '#eschoolapp',
   router,
-  filters
+  filters,
+  store
 });

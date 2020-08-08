@@ -56,7 +56,7 @@
                            </a>
                         </li> -->
                         <li class="menu-item  menu-item-submenu" aria-haspopup="true"  data-menu-toggle="hover">
-                           <a  href="javascript:;" class="menu-link menu-toggle">
+                           <a  href="#" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <i class="fas fa-users"></i>
                               </span>
@@ -67,14 +67,16 @@
                               <ul class="menu-subnav">
                                  <li class="menu-item  menu-item-parent" aria-haspopup="true" ><span class="menu-link"><span class="menu-text">Applications</span></span></li>
                                  <li class="menu-item  menu-item-submenu" aria-haspopup="true"  data-menu-toggle="hover">
-                                    <a  href="javascript:;" class="menu-link menu-toggle">
-                                       <i class="menu-bullet menu-bullet-line"><span></span></i>
-                                       <span class="menu-text">Add Teacher</span>
-                                       <!-- <span class="menu-label">
-                                          <span class="label label-rounded label-primary">6</span>
-                                       </span> -->
-                                       <!-- <i class="menu-arrow"></i> -->
-                                    </a>
+                                    <!-- <a  href="javascript:;" class="menu-link menu-toggle"> -->
+                                       <router-link to='/teacher/add' class="menu-link menu-toggle">
+                                          <i class="menu-bullet menu-bullet-line"><span></span></i>
+                                          <span class="menu-text">Add Teacher</span>
+                                          <!-- <span class="menu-label">
+                                             <span class="label label-rounded label-primary">6</span>
+                                          </span> -->
+                                          <!-- <i class="menu-arrow"></i> -->
+                                       </router-link>
+                                    <!-- </a> -->
                                     <!-- <div class="menu-submenu ">
                                        <i class="menu-arrow"></i>
                                        <ul class="menu-subnav">
@@ -84,13 +86,15 @@
                                  </li>
                                
                                  <li class="menu-item " aria-haspopup="true" >
-                                    <a  href="#" class="menu-link ">
+                                    <!-- <a  href="#" class="menu-link "> -->
+                                    <router-link to='/teacher/all' class="menu-link">
                                        <i class="menu-bullet menu-bullet-line"><span></span></i>
                                        <span class="menu-text">All Teachers</span>
                                        <!-- <span class="menu-label">
                                           <span class="label label-danger label-inline">new</span>
                                        </span> -->
-                                    </a>
+                                    <!-- </a> -->
+                                    </router-link>
                                  </li>
                               </ul>
                            </div>
@@ -111,12 +115,12 @@
                                     <div class="menu-submenu ">
                                        <i class="menu-arrow"></i>
                                        <ul class="menu-subnav">
-                                          <li class="menu-item " aria-haspopup="true" ><a  href="custom/apps/user/list-default.html" class="menu-link "><i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">List - Default</span></a></li>
+                                          <li class="menu-item " aria-haspopup="true" ><a  href="#" class="menu-link "><i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">List - Default</span></a></li>
                                        </ul>
                                     </div>
                                  </li>
                                
-                                 <li class="menu-item " aria-haspopup="true" ><a  href="custom/apps/inbox.html" class="menu-link "><i class="menu-bullet menu-bullet-line"><span></span></i><span class="menu-text">Inbox</span><span class="menu-label"><span class="label label-danger label-inline">new</span></span></a></li>
+                                 <li class="menu-item " aria-haspopup="true" ><a  href="#" class="menu-link "><i class="menu-bullet menu-bullet-line"><span></span></i><span class="menu-text">Inbox</span><span class="menu-label"><span class="label label-danger label-inline">new</span></span></a></li>
                               </ul>
                            </div>
                         </li>

@@ -1,6 +1,6 @@
 <template>
-<form action="/login/verify" method="post" @submit="formsubmit">
-    <input type="hidden" name="_token" :value="csrf">
+<form action="" method="post" @submit.prevent="formsubmit">
+    <!-- <input type="hidden" name="_token" :value="csrf"> -->
     <div id="login">
         <div class="login-view">
             <header class="login-header">
@@ -12,11 +12,7 @@
             <div v-if="errorEmail">{{errorMassageEmail}}</div>
             <input type="password" name="password" required placeholder="Password" v-model="password"/>
             <div v-if="errorPass">{{errorMassagePass}}</div>
-            <button 
-                href="#" 
-                type="submit" 
-                class="login-button"
-            >Login</button>
+            <button type="" class="login-button">Login</button>
             <!-- <div class="login-register">
                 Don't have an account? <a>Sign Up</a>
                 </div>-->
@@ -32,7 +28,6 @@
             </svg>
         </div>
     </div>
-    <!-- <button @click="axios()">ajax submit</button> -->
 </form>
 </template>
 
@@ -55,6 +50,18 @@ export default {
   methods: {
     formsubmit(e) {
       if (this.email && this.password) {
+        axios
+        .post('/api/login/verify', {email: this.email, password: this.password})
+        .then(res => {
+          if (res.data.status == 'success') {
+            this.$store.commit('addUserData', res.data.userdata)
+          } else {
+            this.$emit('error', res.data)
+          }
+        })
+        .catch(err => {
+          console.error(err)
+        });
         this.errorEmail = false;
         this.errorPass = false;
         return true;
@@ -68,15 +75,6 @@ export default {
         this.errorMassagePass = "Please Enter Valid Password!!";
       }
       e.preventDefault();
-    },
-    axios() {
-      axios.post('/api/verify', {'email':this.email, 'password':this.password})
-        .then(function(res){
-          console.log(res)
-        })
-        .catch(function(err){
-          console.error(err)
-        });
     }
   }
 }

@@ -5,20 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\DB;
 
-use App\Model\students;
-use App\Model\employees;
+use App\Model\User;
 use App\Model\login_logs;
 
 class loginController extends Controller
 {
-    //
     function index (){
         $username = 'dev';
         return view('login')->with('username',$username);
     }
     function verify (Request $request){
-        $student = new students();
-        $employe = new employees();
+        $user = new User;
         $loginLog = new login_logs();
         $email = $request->email;
         $pass = $request->password;
@@ -29,36 +26,31 @@ class loginController extends Controller
         $loginLog->browser = $request->header('User-Agent');
         $loginLog->save();
 
-        $userStu = $student::where('email', $email)->first();
-        if (empty($userStu)) {
-            $userEm = $employe::where('email', $email)->first();
-            if (empty($userEm)) {
-                $loginLog->status = 'Failed';
-                $loginLog->save();
-                return redirect('login')
-                            ->with('errormsg', 'Please enter valid User Details');
-            } else {
-                if ($pass == $userEm->password) {
-                    $loginLog->status = 'Success';
-                    $loginLog->save();
-                    return redirect('dashboard/'.$userEm->emp_type.'/'.$userEm->emp_id.'');
-                } else {
-                    $loginLog->status = 'Failed';
-                    $loginLog->save();
-                    return redirect('login')
-                            ->with('errormsg', 'Please enter valid Password');
-                }
-            }
+        $user = $user::where('email', $email)->first();
+        if (empty($user)) {
+            $loginLog->status = 'failed';
+            $loginLog->save();
+            return response()->json([
+                'status' => 'failed',
+                'errormsg' => 'Please enter valid User Details',
+            ]);
         } else {
-            if ($pass == $userStu->password) {
-                //echo "Stu<br>pass matched";
-                return redirect('dashboard/student/'.$userStu->reg_id.'');
+            if ($pass == $user->password) {
+                $loginLog->status = 'success';
+                $loginLog->save();
+                return response()->json([
+                    'status' => 'success',
+                    'errormsg' => 'Login Successful',
+                    'userdata' => $user
+                ]);
             } else {
-                return redirect('login')
-                            ->with('errormsg', 'Please enter valid Password');
+                $loginLog->status = 'failed';
+                $loginLog->save();
+                return response()->json([
+                    'status' => 'failed',
+                    'errormsg' => 'Please enter valid Password',
+                ]);
             }
         }
-        // $request->session()->put('userdata', $userdata);
-        // $request->session()->get('email');
     }
 }

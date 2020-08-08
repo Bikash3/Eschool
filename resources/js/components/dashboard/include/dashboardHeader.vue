@@ -413,7 +413,7 @@ export default {
    props: ['dataUser'],
    data () {
       return {
-         namef: null
+         namef: null,
       }
    }
 }
