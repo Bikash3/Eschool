@@ -6,7 +6,7 @@ import TeacherAll from './components/dashboard/section/teacher/teacherallCompone
 
 export const routes = [
     { path: '/login', component: Login, name: 'login'},
-    { path: '/dashboard/:post/:id', component: Dashboard, name: 'dashboard'},
+    { path: '/dashboard', component: Dashboard, name: 'dashboard'},
     { path: '/teacher/add', component: TeacherAdd, name: 'teacheradd'},
     { path: '/teacher/all', component: TeacherAll, name: 'teacherall'},
 ];

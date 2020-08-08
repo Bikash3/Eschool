@@ -1,16 +1,12 @@
 <template>
   <div class="login-body">
     <span :class="{ err: wrongpass, 'err-em': wrongemail  }">{{error}}</span>
-    <!-- <span class="err-em">Email address wrong</span> -->
-    
-    <div v-if="errorMassage">{{errorMassage}}</div>
     <div class="container">
       <div class="row align-items-center">
         <LoginNotice></LoginNotice>
         <LoginForm 
           :data-csrf="crsf"
           @error="setMessage"
-          :msg="error"
         >
         </LoginForm>
       </div>
@@ -29,7 +25,7 @@ export default {
       crsf: this.dataCrsf,
       error: null,
       wrongpass: true,
-      wrongemail: false
+      wrongemail: true
     }
   },
   components: {

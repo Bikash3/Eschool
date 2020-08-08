@@ -55,6 +55,7 @@ export default {
         .then(res => {
           if (res.data.status == 'success') {
             this.$store.commit('addUserData', res.data.userdata)
+            this.$router.push('dashboard')
           } else {
             this.$emit('error', res.data)
           }

@@ -2513,11 +2513,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['dataUser'],
+  // props: ['dataUser'],
   data: function data() {
     return {
-      namef: null
+      namef: null,
+      name: null
     };
+  },
+  computed: {
+    getname: function getname() {
+      console.log(this.$store.state.userData.name + 'has');
+    }
   }
 });
 
@@ -3935,9 +3941,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3947,7 +3950,7 @@ __webpack_require__.r(__webpack_exports__);
       crsf: this.dataCrsf,
       error: null,
       wrongpass: true,
-      wrongemail: false
+      wrongemail: true
     };
   },
   components: {
@@ -4036,6 +4039,8 @@ __webpack_require__.r(__webpack_exports__);
         }).then(function (res) {
           if (res.data.status == 'success') {
             _this.$store.commit('addUserData', res.data.userdata);
+
+            _this.$router.push('dashboard');
           } else {
             _this.$emit('error', res.data);
           }
@@ -7416,7 +7421,7 @@ var render = function() {
                       staticClass:
                         "text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"
                     },
-                    [_vm._v(_vm._s(_vm.dataUser))]
+                    [_vm._v(_vm._s(_vm.name))]
                   ),
                   _vm._v(" "),
                   _c(
@@ -12699,8 +12704,6 @@ var render = function() {
     _c("span", { class: { err: _vm.wrongpass, "err-em": _vm.wrongemail } }, [
       _vm._v(_vm._s(_vm.error))
     ]),
-    _vm._v(" "),
-    _vm.errorMassage ? _c("div", [_vm._v(_vm._s(_vm.errorMassage))]) : _vm._e(),
     _vm._v(" "),
     _c("div", { staticClass: "container" }, [
       _c(
@@ -30121,7 +30124,7 @@ var routes = [{
   component: _components_login_loginComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: 'login'
 }, {
-  path: '/dashboard/:post/:id',
+  path: '/dashboard',
   component: _components_dashboard_section_dash_dashboardComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   name: 'dashboard'
 }, {
