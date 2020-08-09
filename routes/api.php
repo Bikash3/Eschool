@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 Route::post('/login/verify', "loginController@verify")->name('verifyuser');
 
 // User API
-
+Route::post('/login', 'api\teacher@login');
 // Student API Details
 Route::get('/student/all', 'api\student@index');
 Route::get('/student/single/{id}', 'api\student@edit');
@@ -18,8 +18,12 @@ Route::get('/student/delete/{id}', 'api\student@destroy');
 
 
 // Employee API details
-Route::get('/employee/all', 'api\employee@index');
-Route::get('/employee/single/{id}', 'api\employee@edit');
-Route::put('/employee/update/{id}', 'api\employee@update');
-Route::post('/employee/save', 'api\employee@store');
-Route::get('/employee/delete/{id}', 'api\employee@destroy');
+Route::group(['middleware' => 'auth:api'], function(){
+
+Route::get('/teacher/all', 'api\teacher@index');
+});
+
+Route::get('/teacher/single/{id}', 'api\teacher@edit');
+Route::put('/teacher/update/{id}', 'api\teacher@update');
+Route::post('/teacher/save', 'api\teacher@store');
+Route::get('/teacher/delete/{id}', 'api\teacher@destroy');

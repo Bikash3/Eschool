@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Model\employees;
+use App\Model\User;
 
 class employee extends JsonResource
 {

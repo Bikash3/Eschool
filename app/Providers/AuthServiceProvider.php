@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Providers;
-// use Laravel\Passport\Passport; 
+use Laravel\Passport\Passport; 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -24,7 +24,15 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        // Passport::routes(); 
+         Passport::routes(); 
+
+       // Passport::personalAccessClientId(
+       //      config('passport.personal_access_client.id')
+       //  );
+
+       //  Passport::personalAccessClientSecret(
+       //      config('passport.personal_access_client.secret')
+       //  );
 
         //
     }

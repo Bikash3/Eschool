@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\employee as EmployeeResource;
 use App\Model\User;
+//use Illuminate\Validation\ValidationException;
 use Response;
 use Auth;
 
 class Teacher extends Controller
 {
     
-    
+    public $successStatus = 200;
+
     // public function __construct(){
     //     $this->middleware('auth:api');
     // }
@@ -24,7 +26,35 @@ class Teacher extends Controller
     public function index()
     {
         
-        return EmployeeResource::collection(User::all());
+        //return EmployeeResource::collection(User::all());
+
+        $user = Auth::user(); 
+        return response()->json(['success' => $user], $this-> successStatus); 
+
+    }
+
+    public function login(Request $request){
+        $this->validate($request, [
+            'email'   => 'required|email',
+            'password' => 'required'
+        ]);
+
+        $user = User::where('email',$request->email)->first();
+
+        if($user){
+                if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {     
+                    $user = Auth::user(); 
+                    $success['token'] =  $user->createToken('Auth Token')->accessToken; 
+                    return response()->json(['success' => $success], $this-> successStatus); 
+        
+                }else{
+                    return response()->json(['error'=>'Unauthorised'], 401); 
+
+                }
+        }else{
+                   return response()->json(['error'=>'Account not found!'], 401); 
+
+        }
 
     }
 
@@ -48,15 +78,16 @@ class Teacher extends Controller
     {
             $last_id = '';
             $User = new User([
-                'emp_id' => $request->emp_id,
                 'name' => $request->name,
                 'address' => $request->address,
                 'gender' => $request->gender,
-                'emp_type' => $request->emp_type,
-                'subject' => $request->subject,
+                'd_o_b' => $request->dob,
+                'validity' => date('Y-m-d', strtotime("+30 days")),
                 'phone' => $request->phone,
                 'email' => $request->email,
-                'password' => bcrypt($request->password)
+                'password' => bcrypt($request->password),
+                'usertype' =>'Admin',
+                'status' => 'Y',
             ]);
             $User->save();
             $last_id = $User->id;
